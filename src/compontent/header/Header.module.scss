@@ -1,0 +1,72 @@
+// src/components/common/Header.scss
+.header {
+  border-bottom: 1px solid #e0e0e0; // 구분선
+  padding: 15px 0;
+  background-color: #fff;
+  width: 100%;
+  position: sticky; // 스크롤 시 상단 고정
+  top: 0;
+  z-index: 100;
+
+  .header_inner {
+    max-width: 1200px; // 내용 최대 너비
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; // 좌우 여백
+  }
+
+  .logo {
+    margin: 0;
+    a {
+      display: block;
+      // SVG 크기 조절
+      img {
+        width: 100px; // 로고 크기 조정
+        height: auto;
+      }
+    }
+  }
+
+  .nav {
+    .nav_list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px; // 링크 간 간격
+
+      .nav_item {
+        &.highlight {
+          .nav_link {
+            color: #ff4757; // 후원하기 색상
+            .nav_icon {
+              fill: #ff4757; // 아이콘 색상
+            }
+          }
+        }
+        .nav_link {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: #333;
+          font-size: 14px;
+          font-weight: 500;
+          transition: color 0.2s ease-in-out;
+
+          &:hover {
+            color: #007bff; // 호버 시 색상 변경
+          }
+
+          .nav_icon {
+            margin-right: 5px;
+            width: 16px; // 아이콘 크기
+            height: 16px;
+            fill: #666; // 기본 아이콘 색상
+          }
+        }
+      }
+    }
+  }
+}

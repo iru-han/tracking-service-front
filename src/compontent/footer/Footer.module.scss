@@ -1,0 +1,58 @@
+// src/components/common/Footer.scss
+.footer {
+  background-color: #f5f5f5;
+  padding: 30px 0;
+  border-top: 1px solid #e0e0e0;
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+
+  .footer_inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .copyright {
+    margin-bottom: 20px;
+  }
+
+  .footer_links {
+    .link_list {
+      list-style: none;
+      margin: 0 0 15px 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; // 모바일에서 줄바꿈
+      gap: 15px; // 링크 간 간격
+
+      .link_item {
+        .link {
+          text-decoration: none;
+          color: #666;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .update_date {
+          color: #888;
+        }
+      }
+    }
+
+    .company_info {
+      p {
+        margin-bottom: 5px;
+        line-height: 1.5;
+        a {
+          color: #007bff;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

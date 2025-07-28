@@ -1,0 +1,37 @@
+// src/components/tracker/SearchResultSection.scss
+.search_result_message {
+  background-color: #f8d7da; // 에러 메시지 색상 (이미지 기준)
+  color: #721c24; // 에러 텍스트 색상
+  border: 1px solid #f5c6cb;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search_result_section {
+  max-width: 800px; // 최대 너비
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.default_success_message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 14px;
+  pre {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,235 @@
+// src/components/tracker/TrackerSection.scss
+.tracker_section {
+  max-width: 800px; // 섹션의 최대 너비
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+
+  .title_group {
+    margin-bottom: 30px;
+    .title_icon {
+      width: 50px;
+      height: 50px;
+      fill: #007bff; // 트럭 아이콘 색상
+      margin-bottom: 10px;
+    }
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .description {
+      font-size: 16px;
+      color: #666;
+    }
+  }
+
+  .search_form_container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin-bottom: 30px;
+
+    .search_tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      .tab_item {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #999;
+        border-bottom: 2px solid transparent;
+        transition: all 0.2s ease-in-out;
+
+        &.active {
+          color: #007bff;
+          border-color: #007bff;
+        }
+
+        .tab_icon {
+          // 아이콘 스타일 (필요 시 SVG 사용)
+          width: 18px;
+          height: 18px;
+          margin-right: 8px;
+          background-color: #ccc; // 임시
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .input_group {
+      display: flex;
+      gap: 10px; // 입력 필드 간 간격
+
+      .carrier_select,
+      .tracking_input {
+        flex: 1;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.2s;
+
+        &:focus {
+          border-color: #007bff;
+        }
+      }
+
+      .carrier_select {
+        appearance: none; // 기본 드롭다운 스타일 제거
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px;
+      }
+
+      .search_button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+
+        .search_icon {
+          width: 20px;
+          height: 20px;
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  .ad_area {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+
+    .ad_label {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 10px;
+    }
+
+    .ad_content {
+      display: flex;
+      align-items: center;
+      gap: 20px; // 광고 요소 간 간격
+
+      .ad_text_box {
+        flex-shrink: 0; // 내용이 줄어들지 않도록
+        strong {
+          font-size: 18px;
+          font-weight: bold;
+          color: #333;
+          display: block;
+          margin-bottom: 10px;
+        }
+        .ad_button {
+          background-color: #f0f0f0;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding: 8px 15px;
+          font-size: 14px;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          &:hover {
+            background-color: #e0e0e0;
+          }
+        }
+      }
+
+      .ad_image {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        border-radius: 5px;
+      }
+
+      .ad_info_box {
+        flex-grow: 1; // 남은 공간 차지
+        p {
+          font-size: 14px;
+          color: #555;
+          margin-bottom: 5px;
+        }
+        .ad_brand {
+          font-size: 12px;
+          color: #888;
+          display: block;
+          margin-top: 10px;
+        }
+        .ad_link {
+          font-size: 14px;
+          color: #007bff;
+          text-decoration: none;
+          display: block;
+          margin-top: 5px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .search_result_message {
+    background-color: #fff3cd; // 기본 경고 색상
+    color: #856404; // 기본 경고 텍스트 색상
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+
+    &.error {
+      background-color: #f8d7da; // 에러 메시지 색상
+      color: #721c24; // 에러 텍스트 색상
+      border-color: #f5c6cb;
+    }
+  }
+}
+
+// 반응형: 모바일 화면 대응
+@media (max-width: 768px) {
+  .tracker_section {
+    .search_form_container {
+      padding: 20px;
+      .input_group {
+        flex-direction: column; // 세로로 배치
+        .search_button {
+          width: 100%; // 버튼 너비 100%
+          justify-content: center; // 중앙 정렬
+        }
+      }
+    }
+
+    .ad_area {
+      .ad_content {
+        flex-direction: column; // 세로로 배치
+        align-items: flex-start; // 왼쪽 정렬
+      }
+    }
+  }
+}
